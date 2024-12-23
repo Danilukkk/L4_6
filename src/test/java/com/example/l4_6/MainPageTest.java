@@ -43,7 +43,6 @@ public class MainPageTest {
 
     @Test
     public void search() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         driver.get("https://demoqa.com/dynamic-properties");
        WebElement checkVisible =  myWait(6).clickable(By.cssSelector("#visibleAfter"));
         assertTrue(checkVisible.isDisplayed(),
