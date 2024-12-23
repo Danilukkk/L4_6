@@ -9,13 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static com.example.l4_6.MyWait.myWait;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MainPageTest {
     private static WebDriver driver;
@@ -44,7 +40,7 @@ public class MainPageTest {
     @Test
     public void search() {
         driver.get("https://demoqa.com/dynamic-properties");
-       WebElement checkVisible =  myWait(6).clickable(By.cssSelector("#visibleAfter"));
+        WebElement checkVisible = myWait(6).clickable(By.cssSelector("#visibleAfter"));
         assertTrue(checkVisible.isDisplayed(),
                 "Элемент не появился");
     }
